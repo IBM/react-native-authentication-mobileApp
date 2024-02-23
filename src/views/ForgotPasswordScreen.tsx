@@ -52,7 +52,6 @@ export default function ForgotPasswordScreen() {
   const getSecQuestions = async () => {
     try {
       const response = await userService.getQuestions(email);
-      console.log('response here is', response.data);
       setQuestions(response.data.data);
       setIsEmailVerified(true);
     } catch (error) {

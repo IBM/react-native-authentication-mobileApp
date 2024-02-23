@@ -85,7 +85,6 @@ export default function SignUpScreen() {
       role: 'user',
     };
     try {
-      console.log('data here is', data);
       const response = await userService.register(data);
       if (response.status === 200) {
         setIsLoading(false);
@@ -103,7 +102,6 @@ export default function SignUpScreen() {
         throw Error;
       }
     } catch (error) {
-      console.log('error', error);
       setIsLoading(false);
       alert('User ' + email + ' already exits');
       navigation.navigate('Login');
@@ -222,7 +220,6 @@ export default function SignUpScreen() {
                 placeholder="Select Security Question1"
                 value={firstQuestion}
                 onChange={item => {
-                  console.log('item here is', item);
                   onFirstSelect(item);
                 }}
               />
@@ -249,7 +246,6 @@ export default function SignUpScreen() {
                 placeholder="Select Security Question2"
                 value={secondQuestion}
                 onChange={item => {
-                  console.log('item here is', item);
                   onSecondSelect(item);
                 }}
               />

@@ -73,14 +73,14 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.myshield"
+    namespace "com.authenticationapp"
     defaultConfig {
-        applicationId "com.myshield"
+        applicationId "com.authenticationapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        resValue "string", "build_config_package", "com.myshield"
+        resValue "string", "build_config_package", "com.authenticationapp"
     }
     signingConfigs {
         debug {

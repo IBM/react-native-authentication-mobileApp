@@ -23,9 +23,7 @@ export default function HomeScreen() {
     const getUserDetails = async () => {
       try {
         const id = await AsyncStorage.getItem('loggedInUser');
-        console.log('responseeee email here is', id)
         const response = await userService.getUser(id);
-        console.log('responseeee', response.data)
         setUserDetail(response.data);
       } catch (e) {
         // alert('There is no data for this user');
@@ -35,9 +33,7 @@ export default function HomeScreen() {
       try {
         const role = await AsyncStorage.getItem('role');
         const email = await AsyncStorage.getItem('email');
-        console.log('responseeee email here is', role, email);
         const response = await userService.getAllUser(role, email);
-        console.log('responseeee 11111', response.data);
         setUsers(response.data);
       } catch (e) {
         // alert('There is no data for this user');

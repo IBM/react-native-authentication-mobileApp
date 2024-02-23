@@ -27,7 +27,6 @@ export default function LoginScreen() {
     try {
       let data = {email, password};
       const response = await AuthenticationService.login(data);
-      console.log('response here is', response.data);
       setIsLoading(false);
       storeToken(response.data);
       navigation.navigate('Home');

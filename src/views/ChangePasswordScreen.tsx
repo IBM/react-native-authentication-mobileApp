@@ -65,9 +65,7 @@ export default function ChangePasswordScreen() {
         oldPassword: password,
         newPassword,
       };
-      console.log('responseeee data here is', data);
       const response = await userService.changePassword(data);
-      console.log('response....', response)
       if (response.status === 200) {
         setIsLoading(false);
         alert('Password changed succesfully');
